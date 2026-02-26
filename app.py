@@ -1,5 +1,4 @@
 import streamlit as st
-import tensorflow as tf
 from src.prediction import predict_emotion
 
 st.set_page_config(
