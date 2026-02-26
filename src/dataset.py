@@ -24,10 +24,10 @@ def load_datasets():
     )
     return train_ds, val_ds
 
-def preprocess(image, label):
+def preprocess(image):
     image = tf.cast(image, tf.float32)
     image = preprocess_input(image)
-    return image, label
+    return image
 
 def prepare_dataset(ds):
     AUTOTUNE = tf.data.AUTOTUNE
