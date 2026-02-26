@@ -12,3 +12,7 @@ uploaded_file = st.file_uploader(
 )
 for uploaded_file in uploaded_file:
     st.image(uploaded_file)
+enable = st.checkbox("Enable camera")
+picture = st.camera_input("Take a picture", disabled=not enable)
+if picture:
+    st.image(picture)
