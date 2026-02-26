@@ -1,5 +1,6 @@
 import streamlit as st
 import tensorflow as tf
+from src.prediction import predict_emotion
 
 st.set_page_config(
     page_title="Emotion Recognition",
@@ -17,6 +18,6 @@ enable = st.checkbox("Enable camera")
 picture = st.camera_input("Take a picture", disabled=not enable)
 if picture:
     st.image(picture)
-    bytes_data = picture.getvalue()
-    img_tensor = tf.io.decode_image(bytes_data, channels = 3)
-    
+    emotion =predict_emotion(picture)
+    st.subheader("This is your emotion right now", emotion)
+
