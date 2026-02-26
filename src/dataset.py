@@ -31,7 +31,6 @@ def preprocess(image, label):
 
 def prepare_dataset(ds):
     AUTOTUNE = tf.data.AUTOTUNE
-
     ds = ds.map(preprocess, num_parallel_calls=AUTOTUNE)
     ds = ds.cache()
     ds = ds.prefetch(AUTOTUNE)
