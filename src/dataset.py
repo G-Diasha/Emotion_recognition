@@ -10,7 +10,7 @@ def load_datasets():
         seed=123,
         batch_size=BATCH_SIZE,
         image_size=IMAGE_SIZE,
-        color_mode="rgb",
+        color_mode="rgb"
     )
 
     val_ds = tf.keras.utils.image_dataset_from_directory(
@@ -20,7 +20,7 @@ def load_datasets():
         seed=123,
         batch_size=BATCH_SIZE,
         image_size=IMAGE_SIZE,
-        color_mode="rgb",
+        color_mode="rgb"
     )
     return train_ds, val_ds
 

@@ -6,7 +6,6 @@ from keras.preprocessing.image import load_img
 from .config import CLASS_NAMES, IMAGE_SIZE
 from src.model_loader import load_model
 from src.dataset import preprocess
-from keras.applications.resnet50 import preprocess_input
 
 file_path = "C:/Users/User/Desktop/emotion/dataset/train/surprise/Training_348814.jpg"
 
