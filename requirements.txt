@@ -1,7 +1,7 @@
 streamlit
-tensorflow==2.15.0
+tensorflow==2.18.0
 numpy
 pillow
 opencv-python-headless
-keras==2.15.0
+Keras==3.5.0
 scikit-learn
