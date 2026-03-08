@@ -6,6 +6,11 @@ from PIL import Image
 from src.prediction import predict_emotion
 from src.model_loader import load_model
 
+@st.cache_resource
+def load_model():
+    model = tf.keras.models.load_model("models/resnet50_model2.h5", compile=False)
+    return model
+
 model = load_model()
 
 st.set_page_config(
