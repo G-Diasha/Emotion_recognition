@@ -2,7 +2,6 @@ import numpy as np
 import tensorflow as tf
 import keras
 import cv2
-from keras.preprocessing.image import load_img
 from .config import CLASS_NAMES, IMAGE_SIZE
 from src.model_loader import load_model
 from src.dataset import preprocess
