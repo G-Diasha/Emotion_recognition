@@ -8,13 +8,12 @@ from src.dataset import preprocess
 
 file_path = "C:/Users/User/Desktop/emotion/dataset/train/surprise/Training_348814.jpg"
 
-def predict_emotion(pic):
+def predict_emotion(pic, model):
     #img= cv2.imread(pic)
     img= cv2.resize(pic,(IMAGE_SIZE))
     img = np.array(img)
     image = preprocess(img)
     #print("Shape:", image.shape)
-    model = load_model()
     preds = model.predict(image)
     idx = np.argmax(preds, axis=1)[0]
     result = CLASS_NAMES[idx]
