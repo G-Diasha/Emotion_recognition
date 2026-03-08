@@ -8,7 +8,7 @@ from src.model_loader import load_model
 
 @st.cache_resource
 def load_model():
-    model = tf.keras.models.load_model("models/resnet50_model2.h5", compile=False)
+    model = tf.keras.models.load_model("models/resnet50_model2.h5", compile=False, safe_mode=False)
     return model
 
 model = load_model()
@@ -21,7 +21,7 @@ st.set_page_config(
 st.title("😊 Emotion Recognition App")
 
 st.markdown(
-    "<h2 style='color:purple; text-align:center;'>Upload an image and the model will predict your true emotion.</h3>",
+    "<h2 style='color:purple; text-align:center;'>Upload an image and the model will predict your true emotion.</h2>",
     unsafe_allow_html=True)
 uploaded_file = st.file_uploader(
     "Choose an image...", type=["jpg","jpeg","png"]
