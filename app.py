@@ -1,9 +1,17 @@
+import tensorflow as tf
 import streamlit as st
 import numpy as np
 import cv2
 from PIL import Image
 from src.prediction import predict_emotion
 
+@st.cache_resource
+def load_model():
+    model = tf.keras.models.load_model("models/resnet50_model2.h5", compile=False)
+    return model
+model = load_model()
+
+model = load_model()
 st.set_page_config(
     page_title="Emotion Recognition",
     page_icon="😊",
@@ -22,6 +30,6 @@ if uploaded_file is not None:
     bytes_value = uploaded_file.getvalue()
     np_array = np.frombuffer(bytes_value, np.uint8)
     img = cv2.imdecode(np_array, cv2.IMREAD_COLOR)
-    emotion =predict_emotion(img)
+    emotion =predict_emotion(img, model)
     st.success(f"Predicted Emotion: {emotion}")
 
