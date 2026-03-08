@@ -5,3 +5,10 @@ venv/
 __pycache__/
 *.pyc
 #dataset
+dataset/
+dataset_affectnet/
+# Zip files
+*.zip
+# Images (optional if they are test files)
+*.jpg
+*.png
