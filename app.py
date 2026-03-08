@@ -9,8 +9,10 @@ st.set_page_config(
     page_icon="😊",
     layout="centered"
 )
-st.title("😊 Emotion Recognition Model")
-st.header("Upload an image and the model will predict the emotion.")
+st.title("😊 Emotion Recognition App")
+st.markdown(
+    "<h2 style='color:purple; text-align:center;'>Upload an image and the model will predict your true emotion.</h3>",
+    unsafe_allow_html=True)
 uploaded_file = st.file_uploader(
     "Choose an image...", type=["jpg","jpeg","png"]
 )
