@@ -11,13 +11,13 @@ def load_model():
     return model
 model = load_model()
 
-model = load_model()
 st.set_page_config(
     page_title="Emotion Recognition",
     page_icon="😊",
     layout="centered"
 )
 st.title("😊 Emotion Recognition App")
+
 st.markdown(
     "<h2 style='color:purple; text-align:center;'>Upload an image and the model will predict your true emotion.</h3>",
     unsafe_allow_html=True)
