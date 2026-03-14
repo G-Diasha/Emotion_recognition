@@ -4,7 +4,7 @@ import numpy as np
 import cv2
 from PIL import Image
 from src.prediction import predict_emotion
-from src.model_loader import load_model
+#from src.model_loader import load_model
 
 @st.cache_resource
 def load_model():
