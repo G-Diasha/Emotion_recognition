@@ -6,6 +6,12 @@ from PIL import Image
 from src.prediction import predict_emotion
 #from src.model_loader import load_model
 
+st.set_page_config(
+    page_title="Emotion Recognition",
+    page_icon="😊",
+    layout="centered"
+)
+
 @st.cache_resource
 def load_model():
     model = tf.keras.models.load_model("models/resnet50_model2.h5", compile=False, safe_mode=False)
@@ -13,11 +19,7 @@ def load_model():
 
 model = load_model()
 
-st.set_page_config(
-    page_title="Emotion Recognition",
-    page_icon="😊",
-    layout="centered"
-)
+
 st.title("😊 Emotion Recognition App")
 
 st.markdown(
