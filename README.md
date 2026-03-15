@@ -104,7 +104,7 @@ The application was also containerized using Docker to ensure:
 
 3) Portability across systems
 
-**Running the Project Locally**
+**🛠️ Running the Project Locally**
 
 ***1.Clone the Repository***
 
