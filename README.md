@@ -1,6 +1,6 @@
 # Emotion Recognition using ResNet-50 (Transfer Learning)
 
-**🌐Live APP: _https://lnkd.in/enNJt2SK_**
+**🌐Live APP: _https://emotionrecognition-dg.streamlit.app/_**
 
 🚀**Project Overview**
 
