@@ -108,7 +108,7 @@ The application was also containerized using Docker to ensure:
 
 ***1.Clone the Repository***
 
-_git clone https://github.com/G-Diasha/emotion-recognition.git_
+_git clone https://github.com/G-Diasha/Emotion-recognition.git_
 
 ***2.Install dependencies***
 
